@@ -30,8 +30,8 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    localStorage.setItem("currentUser", JSON.stringify(this.registerForm.value));
-    this.router.navigate(['/']);
+  //  localStorage.setItem("currentUser", JSON.stringify(this.registerForm.value));
+  //  this.router.navigate(['/']);
   }
 
 }

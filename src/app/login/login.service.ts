@@ -6,6 +6,6 @@ export class LoginService {
     constructor(private httpClient: HttpClient) { }
 
     public getData(username: string, password: string) {
-        return this.httpClient.get("http://localhost:3000/" + "login?username=" + username + "&password=" + password);
+        return this.httpClient.get("http://localhost:3000/" + "login?username=" + username); //+ "&password=" + password);
     }
 }
