@@ -1,9 +1,7 @@
 <p>home works!</p>
 <button (click)="logout()">Выйти</button>
 
-
-
-<div class="tablebd">
+<div class="tableSpisok">
 
     <div class="spisok">
         <select [(ngModel)]="tablename">
@@ -12,19 +10,18 @@
         <button (click)="setTableBut(tablename)">ok</button>
     </div>
 
-
-    <table class="table">
-
-        <thead>
-            <th *ngFor="let column of columnNames">{{column.name}}</th>
-
-        </thead>
-        <tbody>
-            <tr *ngFor="let tdata of tableData">
-                <ng-container *ngFor="let column of columnNames">
-                    <td>{{tdata[column.name]}}</td>
-                </ng-container>
-            </tr>
-        </tbody>
-    </table>
+    <div class="tabledb">
+        <table class="table">
+            <thead>
+                <th *ngFor="let column of columnNames">{{column.name}}</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tdata of tableData">
+                    <ng-container *ngFor="let column of columnNames">
+                        <td>{{tdata[column.name]}}</td>
+                    </ng-container>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

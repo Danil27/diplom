@@ -1,9 +1,13 @@
 
-.tablebd{
+.tableSpisok{
     margin: 10px 100px;
     padding: 20px;
     background-color: azure;
 }
-.spisok{
-    margin: 10px;
+.tabledb{
+    margin: 5px;
+    padding: 3px;
+    border: solid 1px black;
+    background-color:rgba(255, 228, 196, 0.404);
+    overflow: auto;
 }
