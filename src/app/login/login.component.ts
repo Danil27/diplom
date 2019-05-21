@@ -25,17 +25,10 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required]
     });
 
-    if (localStorage.getItem("currentUser")) {
-      this.router.navigate(['/']);
-    }
   }
-  users: boolean;
   onSubmit() {
-
-    this.loginService.getData(this.loginForm.value.username, this.loginForm.value.password).subscribe(
-      users => {
-        console.log(users)
-      });
+    this.loginService.doLogin(this.loginForm.value.username, this.loginForm.value.password);
+    this.router.navigate(['/']);
   }
 
 }

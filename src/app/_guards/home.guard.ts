@@ -1,23 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Router, ActivatedRouteSnapshot, RouterStateSnapshot, CanActivate } from '@angular/router';
+import { LoginService } from '../login/login.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class HomeGuard implements CanActivate {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private login: LoginService) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    if (localStorage.getItem('currentUser')) {
+    if (true/*this.login.logged*/) {
       // logged in so return true
       return true;
+    } else {
+      // not logged in so redirect to login page with the return url
+      this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+      return false;
     }
-
-    // not logged in so redirect to login page with the return url
-    this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
-    return false;
   }
-
 
 }

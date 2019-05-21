@@ -1,2 +1,30 @@
 <p>home works!</p>
 <button (click)="logout()">Выйти</button>
+
+
+
+<div class="tablebd">
+
+    <div class="spisok">
+        <select [(ngModel)]="tablename">
+            <option *ngFor="let tns of tablesName" [value]="tns">{{tns}}</option>
+        </select>
+        <button (click)="setTableBut(tablename)">ok</button>
+    </div>
+
+
+    <table class="table">
+
+        <thead>
+            <th *ngFor="let column of columnNames">{{column.name}}</th>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let tdata of tableData">
+                <ng-container *ngFor="let column of columnNames">
+                    <td>{{tdata[column.name]}}</td>
+                </ng-container>
+            </tr>
+        </tbody>
+    </table>
+</div>
