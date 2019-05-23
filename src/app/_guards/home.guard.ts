@@ -11,7 +11,7 @@ export class HomeGuard implements CanActivate {
   constructor(private router: Router, private login: LoginService) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    if (true/*this.login.logged*/) {
+    if (/*this.login.logged*/true) {
       // logged in so return true
       return true;
     } else {

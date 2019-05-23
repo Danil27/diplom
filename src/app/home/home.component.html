@@ -1,27 +1,14 @@
-<p>home works!</p>
-<button (click)="logout()">Выйти</button>
+<div class="page">
+    <div class="heder">
+        <nav class="navbar navbar-dark bg-dark">
 
-<div class="tableSpisok">
-
-    <div class="spisok">
-        <select [(ngModel)]="tablename">
-            <option *ngFor="let tns of tablesName" [value]="tns">{{tns}}</option>
-        </select>
-        <button (click)="setTableBut(tablename)">ok</button>
+            <a routerLink="/home/tablesdb" class="navbar-brand" >Таблицы бд</a>
+            <a routerLink="/home/checklist" class="navbar-brand">Проверки</a>
+            <button (click)="logout()">Выйти</button>
+        </nav>
     </div>
 
-    <div class="tabledb">
-        <table class="table">
-            <thead>
-                <th *ngFor="let column of columnNames">{{column.name}}</th>
-            </thead>
-            <tbody>
-                <tr *ngFor="let tdata of tableData">
-                    <ng-container *ngFor="let column of columnNames">
-                        <td>{{tdata[column.name]}}</td>
-                    </ng-container>
-                </tr>
-            </tbody>
-        </table>
+    <div class="content">
+        <router-outlet></router-outlet>
     </div>
 </div>

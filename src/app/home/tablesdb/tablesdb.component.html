@@ -1,0 +1,28 @@
+<div class="tableSpisok">
+  <div class="spisok">
+    <label>Выберите таблицу:</label><br>
+    <select [(ngModel)]="tablename">
+      <option *ngFor="let tns of tablesName" [value]="tns">{{tns}}</option>
+    </select>
+    <button (click)="setTableBut(tablename)">ok</button>
+  </div>
+
+  <div class="tabledb">
+
+    <table class="table">
+      <thead>
+        <th *ngFor="let column of columnNames">{{column.name}}</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tdata of tableData;let i = index">
+          <ng-container *ngFor="let column of columnNames">
+            <td contenteditable="true" #value (keyup.enter)="getIndexRowTable(value)">
+              {{tdata[column.name]}}
+            </td>
+          </ng-container>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>

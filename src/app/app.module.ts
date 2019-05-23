@@ -11,13 +11,17 @@ import { HomeGuard } from './_guards/home.guard';
 import { LoginService } from './login/login.service';
 import { routing } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
+import { ChecklistComponent } from './home/checklist/checklist.component';
+import { TablesdbComponent } from './home/tablesdb/tablesdb.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    ChecklistComponent,
+    TablesdbComponent
   ],
   imports: [
     BrowserModule,

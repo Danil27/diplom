@@ -1,13 +1,21 @@
-
-.tableSpisok{
-    margin: 10px 100px;
-    padding: 20px;
-    background-color: azure;
+.heder{
+ margin: 0 20px;
 }
-.tabledb{
-    margin: 5px;
-    padding: 3px;
-    border: solid 1px black;
-    background-color:rgba(255, 228, 196, 0.404);
+.navbar{
+    border-radius: 10px;
+}
+
+.content{
+    background-color: rgba(236, 240, 183, 0.822);
+    padding: 10px;
     overflow: auto;
+    margin: 0px 20px;
+    margin-top: 10px;
+    min-height: 300px;
+    border-radius: 10px;
+}
+.page{
+    margin: 10px;
+    overflow: auto;
+    
 }
