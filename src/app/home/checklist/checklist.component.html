@@ -1,3 +1,26 @@
-<p>
-  checklist works!
-</p>
+<div class="spisok">
+
+  <label>Выберите таблицу:</label><br>
+  <select [(ngModel)]="tablename">
+    <option *ngFor="let checklist of checkListInfo" [value]="checklist.id">{{checklist.name}}</option>
+  </select>
+  <button (click)="setCheckListName(tablename)">ok</button>
+</div>
+
+<form #testCheck="ngForm" novalidate *ngIf="questionlist">
+  <table class="checkListTable">
+    <thead>
+      <th class="questionsTh">Вопрос</th>
+      <th>да</th>
+      <th>нет</th>
+    </thead>
+    <tbody *ngFor="let qustion of questionlist">
+      <tr class="form-group">
+        <td>{{qustion.demand}}</td>
+        <td><input name="{{qustion.id}}" type="radio" value="true" ngModel></td>
+        <td><input name="{{qustion.id}}" type="radio" value="false" ngModel></td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="testCheckList(testCheck)">Отправить</button>
+</form>

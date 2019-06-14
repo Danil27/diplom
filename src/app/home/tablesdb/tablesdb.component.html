@@ -8,7 +8,6 @@
   </div>
 
   <div class="tabledb">
-
     <table class="table">
       <thead>
         <th *ngFor="let column of columnNames">{{column.name}}</th>
@@ -21,7 +20,13 @@
             </td>
           </ng-container>
         </tr>
-
+        <tr>
+          <td *ngFor="let i of columnNames"><input></td>
+        </tr>
+        <div class="editTable" *ngIf="buttonVisible">
+          <button>Добавить</button>
+          <button>Удалить</button>
+        </div>
       </tbody>
     </table>
   </div>

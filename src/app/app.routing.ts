@@ -10,13 +10,13 @@ import { TablesdbComponent } from './home/tablesdb/tablesdb.component';
 
 // определение дочерних маршрутов
 const itemRoutes: Routes = [
-  { path: 'checklist', component: ChecklistComponent },
-  { path: 'tablesdb', component: TablesdbComponent }
+  { path: 'tablesdb', component: TablesdbComponent },
+  { path: 'checkList', component: ChecklistComponent }
 ];
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [HomeGuard] },
-  { path: 'home', component: HomeComponent,  children: itemRoutes },
+  { path: 'home', component: HomeComponent, children: itemRoutes },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: '/home' }

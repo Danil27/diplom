@@ -29,7 +29,7 @@ import { TablesdbComponent } from './home/tablesdb/tablesdb.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule
-    ],
+  ],
   providers: [HomeGuard, LoginService],
   bootstrap: [AppComponent]
 })

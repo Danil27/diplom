@@ -8,14 +8,12 @@ import { LoginService } from '../login/login.service';
   styleUrls: ['./home.component.css'],
   providers: [ LoginService]
 })
-export class HomeComponent implements OnInit {
 
+export class HomeComponent implements OnInit {
 
   constructor(private router: Router,
     private loginService: LoginService
   ) { }
-
-
 
   ngOnInit() {
   }
@@ -24,5 +22,4 @@ export class HomeComponent implements OnInit {
     this.loginService.logout();
     this.router.navigate(['/login']);
   }
-
 }

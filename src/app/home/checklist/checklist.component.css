@@ -1,0 +1,11 @@
+.checkListTable{
+    border: 1px solid black;
+    margin: 20px auto;
+}
+th,td{
+    border: 1px solid black;
+    padding: 4px 10px;
+}
+.questionsTh{
+    width: 320px;
+}

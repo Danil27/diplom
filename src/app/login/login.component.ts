@@ -30,5 +30,4 @@ export class LoginComponent implements OnInit {
     this.loginService.doLogin(this.loginForm.value.username, this.loginForm.value.password);
     this.router.navigate(['/']);
   }
-
 }
