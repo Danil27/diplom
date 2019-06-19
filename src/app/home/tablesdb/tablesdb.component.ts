@@ -13,8 +13,8 @@ export class TablesdbComponent implements OnInit {
   columnNames: any[] = [];
   tableData: any = {};
   tablesName: String[] = [
-    "answers", "check", "checklist", "employees", "employeesr_role", "questions",
-    "roles", "subdvision", "subject", "users", "violation"
+    "answers", "check", "checklist", "questions",
+     "subdvision", "users", "violation"
   ];
   constructor(private homeService: HttpClientHome) { }
 

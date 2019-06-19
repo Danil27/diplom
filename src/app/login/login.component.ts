@@ -9,6 +9,7 @@ import { LoginService } from './login.service';
   styleUrls: ['./login.component.css'],
   providers: [LoginService]
 })
+
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;

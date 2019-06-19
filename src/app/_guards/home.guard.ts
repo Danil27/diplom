@@ -12,7 +12,7 @@ export class HomeGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (/*this.login.logged*/true) {
-      // logged in so return true
+      // logged in so 
       return true;
     } else {
       // not logged in so redirect to login page with the return url
@@ -20,5 +20,4 @@ export class HomeGuard implements CanActivate {
       return false;
     }
   }
-
 }

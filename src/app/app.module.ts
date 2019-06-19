@@ -13,6 +13,7 @@ import { routing } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import { ChecklistComponent } from './home/checklist/checklist.component';
 import { TablesdbComponent } from './home/tablesdb/tablesdb.component';
+import { TextAnalysisComponent } from './home/text-analysis/text-analysis.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TablesdbComponent } from './home/tablesdb/tablesdb.component';
     RegisterComponent,
     HomeComponent,
     ChecklistComponent,
-    TablesdbComponent
+    TablesdbComponent,
+    TextAnalysisComponent
   ],
   imports: [
     BrowserModule,

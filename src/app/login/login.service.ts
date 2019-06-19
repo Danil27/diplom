@@ -9,7 +9,7 @@ export class LoginService {
     apiUrl: String;
 
     constructor(private http: HttpClient) {
-        this.loggedIn = false;// new Subject();
+        this.loggedIn = false;
         this.getLogin();
         this.apiUrl = "http://localhost:3000";
     }
@@ -21,20 +21,16 @@ export class LoginService {
         }, {
                 withCredentials: true
             }).subscribe((resp: any) => {
-                //this.loggedIn.next(resp.loggedIn);
                 this.loggedIn = true;
-                //console.log(resp.loggedIn);
             }, (errorResp) => {
                 this.loggedIn = false;
             });
-        //console.log("dologin: " + this.loggedIn);
     }
 
     getLogin() {
         this.http.get(this.apiUrl + '/login', {
             withCredentials: true
         }).subscribe((resp: any) => {
-            //this.loggedIn.next(resp.loggedIn);
             this.loggedIn = resp.loggedIn;
             console.log("resp: " + resp.loggedIn);
         }, (errorResp) => {
@@ -46,7 +42,6 @@ export class LoginService {
         this.http.post(this.apiUrl + '/logout', {}, {
             withCredentials: true
         }).subscribe(() => {
-            //this.loggedIn.next(false);
             this.loggedIn = false;
         });
     }
@@ -56,5 +51,4 @@ export class LoginService {
         console.log("logged: " + this.loggedIn);
         return this.loggedIn;
     }
-
 }
