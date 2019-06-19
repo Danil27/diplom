@@ -1,0 +1,10 @@
+.textanalysisform{
+    position: absolute;
+    padding: 10px;
+    background-color: rgba(192, 223, 253, 0.459);
+}
+
+button{
+    float: right;
+    margin-right: 10px;
+}

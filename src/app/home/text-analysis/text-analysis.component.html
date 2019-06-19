@@ -1,0 +1,6 @@
+<div class="textanalysisform">
+  <form #textform="ngForm" novalidate class="form-group">
+    <textarea cols="70" rows="10" ngModel name="text"></textarea> <br>
+    <button (click)="getText(textform)">Отправить</button>
+  </form>
+</div>
