@@ -1,10 +1,28 @@
+.content{ 
+    margin: 0 auto;
+}
+
 .textanalysisform{
-    position: absolute;
     padding: 10px;
     background-color: rgba(192, 223, 253, 0.459);
+    width: 530px;
+    height: 302px;
+    float: left;
 }
 
 button{
     float: right;
     margin-right: 10px;
+}
+
+.tableclassification{
+    padding: 10px;
+    background-color: rgba(192, 253, 233, 0.459);
+    float: right;
+    position: relative;
+}
+
+th,td{
+    border: 1px solid black;
+    padding: 4px 10px;
 }

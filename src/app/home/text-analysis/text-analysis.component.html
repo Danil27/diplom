@@ -1,6 +1,43 @@
-<div class="textanalysisform">
-  <form #textform="ngForm" novalidate class="form-group">
-    <textarea cols="70" rows="10" ngModel name="text"></textarea> <br>
-    <button (click)="getText(textform)">Отправить</button>
-  </form>
+<div class="content">
+  <div class="textanalysisform">
+    <form #textform="ngForm" novalidate class="form-group">
+      <textarea cols="70" rows="10" ngModel name="text"></textarea> <br>
+      <button (click)="getText(textform)">Отправить</button>
+    </form>
+  </div>
+  <div class="tableclassification">
+    <table class="explanation">
+      <thead>
+        <th>Классификация</th>
+        <th>Вероятность</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Обеспечение безопасности технологического процесса</td>
+          <td>{{veroyatnost[0].toFixed(2)}}</td>
+        </tr>
+        <tr>
+          <td>Техническое состояние опасного производственного объекта</td>
+          <td>{{veroyatnost[1].toFixed(2)}}</td>
+        </tr>
+        <tr>
+          <td>Своевременность проведения регламентных работ</td>
+          <td>{{veroyatnost[2].toFixed(2)}}</td>
+        </tr>
+        <tr>
+          <td>Уровень организации работ</td>
+          <td>{{veroyatnost[3].toFixed(2)}}</td>
+        </tr>
+        <tr>
+          <td>Выполнение предписаний Ростехнадзора и проведение внутреннего аудита</td>
+          <td>{{veroyatnost[4].toFixed(2)}}</td>
+        </tr>
+        <tr>
+          <td>Обеспеченность опасного производственного объекта необходимой документацией,<br>
+            качество ее ведения</td>
+          <td>{{veroyatnost[5].toFixed(2)}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

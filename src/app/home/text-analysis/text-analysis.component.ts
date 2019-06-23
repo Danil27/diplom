@@ -10,14 +10,16 @@ import { HttpClientHome } from '../httpHome.service';
 })
 export class TextAnalysisComponent implements OnInit {
 
+  veroyatnost: any;
   constructor(private httpClient: HttpClientHome) { }
 
   ngOnInit() {
   }
 
   getText(form: NgForm) {
-    //console.log(form.value.text);
-    this.httpClient.getData("settext/?text=" + form.value.text).subscribe();
+    this.httpClient.getData("settext?text=" + form.value.text).subscribe((resp: any) => {
+      this.veroyatnost = resp;
+    });
   }
 
 }
