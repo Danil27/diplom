@@ -1,11 +1,13 @@
 <div class="content">
   <div class="textanalysisform">
+    <label>Объяснительная</label>
     <form #textform="ngForm" novalidate class="form-group">
-      <textarea cols="70" rows="10" ngModel name="text"></textarea> <br>
+      <textarea cols="60" rows="10" ngModel name="text"></textarea> <br>
       <button (click)="getText(textform)">Отправить</button>
     </form>
   </div>
   <div class="tableclassification">
+    <label>Классификация нарушения описаного в объяснительной</label>
     <table class="explanation">
       <thead>
         <th>Классификация</th>
@@ -29,11 +31,11 @@
           <td>{{veroyatnost[3].toFixed(2)}}</td>
         </tr>
         <tr>
-          <td>Выполнение предписаний Ростехнадзора и проведение внутреннего аудита</td>
+          <td>Выполнение предписаний Ростехнадзора и проведение <br>внутреннего аудита</td>
           <td>{{veroyatnost[4].toFixed(2)}}</td>
         </tr>
         <tr>
-          <td>Обеспеченность опасного производственного объекта необходимой документацией,<br>
+          <td>Обеспеченность опасного производственного объекта необходимой <br>документацией,
             качество ее ведения</td>
           <td>{{veroyatnost[5].toFixed(2)}}</td>
         </tr>

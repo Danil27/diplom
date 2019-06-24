@@ -42,7 +42,13 @@ export class ChecklistComponent implements OnInit {
 
   testCheckList(form: NgForm) {
     this.answerList = form.value;
-    this.httpClientHome.getDataPost("addAnswers", this.answerList).subscribe();
-    console.log(this.answerList);
+
+    this.httpClientHome.getDataPost("addAnswers?test=", this.answerList).subscribe();
+  }
+
+  analysisCheckList(form: NgForm) {
+    this.answerList = form.value;
+
+    this.httpClientHome.getDataPost("analysisCheckList?test=", this.answerList).subscribe();
   }
 }

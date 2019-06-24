@@ -8,19 +8,26 @@
 </div>
 
 <form #testCheck="ngForm" novalidate *ngIf="questionlist">
-  <table class="checkListTable">
-    <thead>
-      <th class="questionsTh">Вопрос</th>
-      <th>да</th>
-      <th>нет</th>
-    </thead>
-    <tbody *ngFor="let qustion of questionlist">
-      <tr class="form-group">
-        <td>{{qustion.demand}}</td>
-        <td><input name="{{qustion.id}}" type="radio" value="true" ngModel></td>
-        <td><input name="{{qustion.id}}" type="radio" value="false" ngModel></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="tablecheck">
+    <table class="checkListTable">
+      <thead>
+        <th class="questionsTh">Вопрос</th>
+        <th>да</th>
+        <th>нет</th>
+      </thead>
+      <tbody *ngFor="let qustion of questionlist">
+        <tr class="form-group">
+          <td>{{qustion.demand}}</td>
+          <td><input name="{{qustion.id}}" type="radio" value="true" ngModel></td>
+          <td><input name="{{qustion.id}}" type="radio" value="false" ngModel></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="description">
+    <label>Описание нарушения:</label><br>
+    <textarea cols="90" rows="11" placeholder="Введите описание.." name="description" ngModel></textarea>
+  </div>
   <button (click)="testCheckList(testCheck)">Отправить</button>
+  <button (click)="analysisCheckList(testCheck)">Расчитать</button>
 </form>
