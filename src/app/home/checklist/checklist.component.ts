@@ -13,6 +13,7 @@ export class ChecklistComponent implements OnInit {
   answerList: any[] = [];
   questionlist: any;
   checkListId: number;
+  text: string;
 
   constructor(private httpClientHome: HttpClientHome) { }
 
@@ -43,12 +44,16 @@ export class ChecklistComponent implements OnInit {
   testCheckList(form: NgForm) {
     this.answerList = form.value;
 
-    this.httpClientHome.getDataPost("addAnswers?test=", this.answerList).subscribe();
+    this.httpClientHome.getDataPost("addAnswers", this.answerList).subscribe();
   }
 
   analysisCheckList(form: NgForm) {
     this.answerList = form.value;
 
-    this.httpClientHome.getDataPost("analysisCheckList?test=", this.answerList).subscribe();
+    this.httpClientHome.getDataPost("analysisCheckList", this.answerList).subscribe((resp: any) => {
+      this.text = resp.description;
+      console.log(resp.description);
+    });
   }
 }
+ 

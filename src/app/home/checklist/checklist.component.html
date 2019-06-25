@@ -26,7 +26,7 @@
   </div>
   <div class="description">
     <label>Описание нарушения:</label><br>
-    <textarea cols="90" rows="11" placeholder="Введите описание.." name="description" ngModel></textarea>
+    <textarea cols="90" rows="11" placeholder="Введите описание.." name="description" ngModel>{{text}}</textarea>
   </div>
   <button (click)="testCheckList(testCheck)">Отправить</button>
   <button (click)="analysisCheckList(testCheck)">Расчитать</button>
